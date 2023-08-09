@@ -1,0 +1,16 @@
+<div class="p-3 mb-2 bg-secondary text-white">
+  <p>Name: <%= @friend.first_name %> <%= @friend.last_name %></p>
+  <p>Email: <%= @friend.email %></p>
+  <p>Phone: <%= @friend.phone %></p>
+  <p>Twitter: <%= @friend.twitter %></p>
+</div>
+
+<div>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-dark" %> 
+  <%= link_to "Back to friends", friends_path, class: "btn btn-dark" %> 
+</div>
+
+<div>
+<br/>
+ <%= button_to "Destroy this friend", @friend, method: :delete, class: "btn btn-danger" %>
+</div>
